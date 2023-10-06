@@ -27,7 +27,7 @@
    */
 
   filters.BlendImage = createClass(filters.BaseFilter, /** @lends fabric.Image.filters.BlendImage.prototype */ {
-    type: 'BlendImage',
+    type: 'BlendImageNew',
 
     /**
      * Color to make the blend operation with. default to a reddish color since black or white
