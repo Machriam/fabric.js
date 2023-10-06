@@ -7,7 +7,7 @@
 
   /**
    * Image Blend filter class
-   * @class fabric.Image.filter.BlendImage
+   * @class fabric.Image.filter.BlendImageNew
    * @memberOf fabric.Image.filters
    * @extends fabric.Image.filters.BaseFilter
    * @example
@@ -16,7 +16,7 @@
    *  mode: 'multiply'
    * });
    *
-   * var filter = new fabric.Image.filters.BlendImage({
+   * var filter = new fabric.Image.filters.BlendImageNew({
    *  image: fabricImageObject,
    *  mode: 'multiply',
    *  alpha: 0.5
@@ -26,7 +26,7 @@
    * canvas.renderAll();
    */
 
-  filters.BlendImage = createClass(filters.BaseFilter, /** @lends fabric.Image.filters.BlendImage.prototype */ {
+  filters.BlendImageNew = createClass(filters.BaseFilter, /** @lends fabric.Image.filters.BlendImageNew.prototype */ {
     type: 'BlendImageNew',
 
     /**
@@ -235,13 +235,13 @@
    * @static
    * @param {Object} object Object to create an instance from
    * @param {function} callback to be invoked after filter creation
-   * @return {fabric.Image.filters.BlendImage} Instance of fabric.Image.filters.BlendImage
+   * @return {fabric.Image.filters.BlendImageNew} Instance of fabric.Image.filters.BlendImageNew
    */
-  fabric.Image.filters.BlendImage.fromObject = function(object, callback) {
+  fabric.Image.filters.BlendImageNew.fromObject = function(object, callback) {
     fabric.Image.fromObject(object.image, function(image) {
       var options = fabric.util.object.clone(object);
       options.image = image;
-      callback(new fabric.Image.filters.BlendImage(options));
+      callback(new fabric.Image.filters.BlendImageNew(options));
     });
   };
 
